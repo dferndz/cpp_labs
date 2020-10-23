@@ -3,6 +3,7 @@
 Implement my_sort in my_sort.cpp.  
 
 #### DO NOT PROVIDE STUDENTS `tester.cpp` or `tester.hpp` 
+Must provide students with tester.o  
 
 
 ## Compile
