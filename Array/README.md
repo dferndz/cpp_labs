@@ -5,7 +5,8 @@ Implement:
 - reverse
 - search
 - binary_search  
-In operations.cpp   
+
+In `operations.cpp`  
 
 #### DO NOT PROVIDE STUDENTS `tester.cpp` or `tester.hpp` 
 Must provide students with `tester.o` 
