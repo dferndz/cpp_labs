@@ -1,6 +1,6 @@
 CC=g++
 CF=-std=c++11
-OBJS=sdriver.o my_sort.o clock.o
+OBJS=sdriver.o operations.o clock.o tester.o utils.o
 OUTPUT=sdriver
 
 all: $(OBJS)
@@ -10,5 +10,5 @@ all: $(OBJS)
 	$(CC) $(CF) -c $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f $(filter-out tester.o, $(wildcard *.o))
 	rm $(OUTPUT)
