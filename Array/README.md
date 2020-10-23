@@ -2,7 +2,7 @@
 
 Implement my_sort in my_sort.cpp.  
 
-#### DO NOT PROVIDE STUDENTS `tester.hpp` or `tester.hpp` 
+#### DO NOT PROVIDE STUDENTS `tester.cpp` or `tester.hpp` 
 
 
 ## Compile
