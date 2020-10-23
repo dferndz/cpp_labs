@@ -10,5 +10,5 @@ all: $(OBJS)
 	$(CC) $(CF) -c $< -o $@
 
 clean:
-	rm -f $(filter-out tester.o, $(wildcard *.o))
+	rm -f sdriver.o operations.o clock.o utils.o
 	rm $(OUTPUT)
