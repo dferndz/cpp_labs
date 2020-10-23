@@ -1,4 +1,4 @@
-# Sorting Lab
+# Array Lab
 
 Implement:  
 - my_sort  
