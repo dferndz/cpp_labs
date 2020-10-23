@@ -29,6 +29,7 @@ void evaluate_score(trace_result_t results);
 
 int main(int argc, char *argv[]) {
   trace_result_t result;
+  std::cout << std::fixed << std::showpoint << std::setprecision(6);
   std::cout << "\n------- RUNNING TESTS -------"  << std::endl;
   for (int i = 0; i < traces.size(); i++) {
     trace_file.open(traces[i]);
