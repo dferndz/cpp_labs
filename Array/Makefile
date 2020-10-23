@@ -9,6 +9,10 @@ all: $(OBJS)
 %.o: %.cpp
 	$(CC) $(CF) -c $< -o $@
 
+cleanw:
+	del /f $(filter-out tester.o, $(wildcard *.o))
+	del /f $(OUTPUT).exe
+
 clean:
-	rm -f sdriver.o operations.o clock.o utils.o
+	rm -f $(filter-out tester.o, $(wildcard *.o))
 	rm $(OUTPUT)
