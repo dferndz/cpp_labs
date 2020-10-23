@@ -7,8 +7,9 @@ struct trace_result_t {
   double exec_time;
   bool correct;
   unsigned trace_number;
+  bool time_exc;
 
-  trace_result_t(): score(0), max_score(0), exec_time(0), correct(true), trace_number(0) {}
+  trace_result_t(): score(0), max_score(0), exec_time(0), correct(true), trace_number(0), time_exc(false) {}
 };
 
 // load array from file

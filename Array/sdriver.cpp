@@ -56,6 +56,9 @@ void evaluate_score(trace_result_t results) {
     std::cout << "Trace " << std::setw(3) << results.trace_number << " FAILED" << std::endl;
   }
   std::cout << " - Score: " << results.score << "/" << results.max_score <<  " | " << results.exec_time << " ms" << std::endl;
+  if (results.time_exc) {
+    std::cout << "   Execution time exceeded." << std::endl;
+  }
   total_traces++;
   score += results.score;
   max_score += results.max_score;

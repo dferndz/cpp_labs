@@ -221,6 +221,12 @@ trace_result_t run_trace(std::ifstream &file) {
     }
   }
 
+  if (results.exec_time > time_limit) {
+    results.score = 0;
+    results.correct = false;
+    results.time_exc = true;
+  }
+
   delete [] array;
   delete [] test_array;
 
