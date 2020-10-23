@@ -1,0 +1,20 @@
+n
+if 45
+if 86
+if 23
+r
+pf
+pb
+r
+if 1
+if 1
+if 5
+ib 8
+ib 0
+r
+r
+r
+pf
+pb
+pf
+d
