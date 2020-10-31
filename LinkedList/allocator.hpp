@@ -3,7 +3,9 @@
 
 #include <stdlib.h>
 
-size_t get_allocated();
+enum status_t { EMPTY_MEMORY, ALLOCATED_MEMORY, INVALID_PTR };
+
+status_t get_status();
 void mm_init();
 void *operator new(size_t size);
 void *operator new[](size_t s);

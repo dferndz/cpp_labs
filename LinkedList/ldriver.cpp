@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
 }
 
 bool is_mem_valid() {
-  return get_allocated() == 0;
+  return get_status() != INVALID_PTR;
 }
 
 void process_command(string cmd, ifstream &file) {
