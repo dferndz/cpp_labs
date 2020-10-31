@@ -20,7 +20,7 @@ bool is_memory_valid;
 size_t total_traces;
 size_t correct_traces;
 
-bool is_mem_valid();
+bool is_mem_invalid();
 
 void process_command(string cmd, ifstream &file);
 
@@ -66,8 +66,8 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-bool is_mem_valid() {
-  return get_status() != INVALID_PTR;
+bool is_mem_invalid() {
+  return get_status() != EMPTY_MEMORY;
 }
 
 void process_command(string cmd, ifstream &file) {
@@ -123,7 +123,7 @@ void process_command(string cmd, ifstream &file) {
   if (cmd == "d") {
     delete linked_list;
     delete test_list;
-    if(!is_mem_valid()) {
+    if(is_mem_invalid()) {
       is_trace_valid = false;
       is_memory_valid = false;
     }

@@ -40,7 +40,8 @@ static void deallocate(void* ptr) {
   if (ptr) {
     if (get_header(ptr)->magic == MAGIC_HEADER) {
       free(get_header(ptr));
-      if (--allocated == 0) {
+      --allocated;
+      if (allocated == 0) {
         if (status != INVALID_PTR)
           status = EMPTY_MEMORY;
       }

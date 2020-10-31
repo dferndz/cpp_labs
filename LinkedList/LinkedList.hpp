@@ -23,7 +23,7 @@ class LinkedList {
 public:
   //default constructor
   LinkedList() {
-
+    
   }
   ~LinkedList() {
 
