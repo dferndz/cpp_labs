@@ -5,10 +5,10 @@
 
 typedef unsigned long size_t;
 
-class NotImplementedException : public std::logic_error
+class EmptyListException : public std::logic_error
 {
 public:
-  NotImplementedException(): logic_error("Function not yet implemented.") {}
+  EmptyListException(): logic_error("The list is empty.") {}
 };
 
 template<class _T>
@@ -30,49 +30,46 @@ public:
   }
   //insert an element in the back of the list
   //arg1 - the value to be inserted
-  void insert_back(const _T&) {
-    throw NotImplementedException();
+  void insert_back(const _T& val) {
+
   }
   //insert an element in the front of the list
   //arg1 - the value to be inserted
-  void insert_front(const _T&) {
-    throw NotImplementedException();
+  void insert_front(const _T& val) {
+
   }
   //pop the element in the back of the list
   _T pop_back() {
-    throw NotImplementedException();
+    throw EmptyListException();
   }
   //pop the element in the front of the list
   _T pop_front() {
-    throw NotImplementedException();
+    throw EmptyListException();
   }
   //get the size of the list
   size_t size() {
-    throw NotImplementedException();
+    return 0;
   }
   //reverse the list
   void reverse() {
-    throw NotImplementedException();
+
   }
   //return true if list is empty
   bool is_empty() {
-    throw NotImplementedException();
+    return true;
   }
   //return element at position n
   _T& at(size_t n) {
-    throw NotImplementedException();
+    throw EmptyListException();
   }
-  //get bottom value
+  //get bottom value, return the removed value
   _T& bottom() {
-    throw NotImplementedException();
+    throw EmptyListException();
   }
-  //get top value
+  //get top value, return the removed value
   _T& top() {
-    throw NotImplementedException();
+    throw EmptyListException();
   }
-  //get initial node
-  //WARNING do not modify this function
-  node_t<_T>* get_head() { return _head;  }
 protected:
 //head of list
   node_t<_T> *_head;

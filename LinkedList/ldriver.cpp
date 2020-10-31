@@ -88,7 +88,11 @@ void process_command(string cmd, ifstream &file) {
     test_list->reverse();
   }
   if (cmd == "pf") {
-    val = linked_list->pop_front();
+    try {
+      val = linked_list->pop_front();
+    } catch (exception &e) {
+      is_trace_valid = false;
+    }
     test_val = test_list->front();
     test_list->pop_front();
 
@@ -97,7 +101,11 @@ void process_command(string cmd, ifstream &file) {
     }
   }
   if (cmd == "pb") {
-    val = linked_list->pop_back();
+    try {
+      val = linked_list->pop_back();
+    } catch (exception &e) {
+      is_trace_valid = false;
+    }
     test_val = test_list->back();
     test_list->pop_back();
 
