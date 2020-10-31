@@ -9,6 +9,7 @@ void my_sort(int *a, unsigned long s, SORT_ORDER o) {
 }
 
 // Reverse an array of integers
+//  Cannot allocate memory
 // arg1 - pointer to array
 // arg2 - size of array
 void reverse(int *a, unsigned long s) {
